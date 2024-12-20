@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE>CORTO</TITLE>
+</HEAD>
+
+<script language="javascript">
+var fotos=new Array("imagenes\\chicoc1.jpg","imagenes\\chicoc2.jpg","imagenes\\chicoc3.jpg");
+var contador=0;
+
+function mostrar(avance){
+	var avance;
+	contador=(contador+avance);
+	if (document.images){
+		// Para que se un bucle infinito
+		if (contador==fotos.length){
+			contador=0;
+		}
+		if (contador==-1){
+			contador=fotos.length-1;
+		}
+		
+		document.fotosveo.src=fotos[contador];
+	}
+}
+
+</script>
+
+<BODY bgcolor=beige>
+
+<P>
+<TABLE cellSpacing=1 cellPadding=1 align=center border=0>
+  
+  <TR>
+    <TD><IMG alt=Logocortos src="imagenes\logocortos.gif"></TD>
+    <TD><IMG style="WIDTH: 292px; HEIGHT: 292px" height=221 alt="" 
+      src="imagenes\chicoc1.jpg"  width=209 name=fotosveo></TD>
+  </TR>
+  <TR >
+    <TD colspan=2 align=center>
+		<a href="javascript:mostrar(-1)">
+			<IMG alt="" src="imagenes\back2.gif">
+		</a>
+		&nbsp;
+		<a href="javascript:mostrar(1)">
+			<IMG   alt="" src="imagenes\next2.gif">
+		</a>
+	</TD>
+  </TR>
+  <TR>
+    <TD colspan=2 align=center>
+      <FONT face=Arial>
+		<a href="chicos.htm">
+			Volver
+		</a>
+	  </FONT>
+     </TD>
+   </TR>
+</TABLE></P>
+
+</BODY>
+</HTML>

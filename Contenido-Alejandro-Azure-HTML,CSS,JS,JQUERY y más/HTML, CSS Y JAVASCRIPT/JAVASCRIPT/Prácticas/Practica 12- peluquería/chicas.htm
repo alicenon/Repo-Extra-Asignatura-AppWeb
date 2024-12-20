@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE>Chicas</TITLE>
+
+<script language="javascript">
+
+var productos=new Array("imagenes\\cosm_m1.jpg","imagenes\\cosm_m2.jpg","imagenes\\cosm_m3.jpg");
+var contador=0;
+var imgtot=productos.length; 
+
+function banner(){
+	if (document.images){
+		contador++;
+			
+		if (contador==imgtot){
+			contador=0;
+		}
+	
+		document.anuncio.src=productos[contador];
+		setTimeout("banner()",1000);
+	}
+}
+
+function mandar(){
+	//Ojo el caso 0 no es una direccion entonces que no haga nada
+	if (select2.value!="0"){
+	location.href=select2.value;
+	}
+	//Como defini los value con la direccion al ejecutar me manda alli
+}
+
+</script>
+
+</HEAD>
+
+<BODY onLoad="banner()" bgcolor=beige>
+
+
+<center>
+<FONT face=Arial color=red size=5>
+  <STRONG>Peinados </STRONG>
+</FONT>
+
+<br>
+
+<FONT face=Arial color=red size=5>
+	<STRONG>para Chicas</STRONG>
+</FONT>
+<br><br>
+<SELECT id=select2 name=select2 onChange="mandar()"> 
+	<OPTION value="0">Elige una opción</OPTION>
+	<OPTION value="recogidos.htm">RECOGIDOS</OPTION>
+	<OPTION value="melenas.htm">MELENAS</OPTION>
+	<!-- Dando en el value el nombre de la pagina al hacer
+	 la funcion, si accedo al value del	option ire a esa pagina-->
+</SELECT>
+<br><br>
+<FONT FACE=ARIAL>Productos recomendados:</FONT>
+<br>
+<img src="imagenes\cosm_m1.jpg" name="anuncio">
+</center>
+
+</BODY>
+</HTML>

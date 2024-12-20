@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE>Recogidos</TITLE>
+</HEAD>
+
+<script language="javascript">
+var fotos=new Array("imagenes\\recogido1.jpg","imagenes\\recogido2.jpg","imagenes\\recogido3.jpg","imagenes\\recogido4.jpg","imagenes\\recogido5.jpg","imagenes\\recogido6.jpg","imagenes\\recogido7.jpg","imagenes\\recogido8.jpg","imagenes\\recogido9.jpg","imagenes\\recogido10.jpg");
+var contador=0;
+
+function mostrar(avance){
+	var avance;
+	contador=(contador+avance);
+	if (document.images){
+		// Para que se un bucle infinito
+		if (contador==fotos.length){
+			contador=0;
+		}
+		if (contador==-1){
+			contador=fotos.length-1;
+		}
+		
+		document.fotosveo.src=fotos[contador];
+	}
+}
+
+</script>
+
+<BODY bgcolor=beige>
+
+<P>
+<TABLE cellSpacing=1 cellPadding=1 align=center border=0>
+  
+  <TR>
+    <TD><IMG  alt=Logorecogido src="imagenes\logorecogidos.gif" width=74 ></TD>
+    <TD><IMG  style="WIDTH: 
+      243px;  HEIGHT: 328px" height=302 alt="" src="imagenes\recogido1.jpg" width=209 name=fotosveo ></TD>
+  </TR>
+  <TR >
+    <TD colspan=2 align=middle>
+		<A href="javascript:mostrar(-1)">
+			<IMG alt="" src="imagenes\back2.gif">
+		</A>
+		&nbsp;
+		<A href="javascript:mostrar(1)">
+			<IMG   alt="" src="imagenes\next2.gif">
+		</A>
+	</TD>
+  </TR>
+  <TR>
+    <TD colspan=2 align=middle>
+      <FONT face=Arial>
+		<A href="chicas.htm">
+			Volver
+		</A>
+	  </FONT>
+     </TD>
+   </TR>
+</TABLE></P>
+
+</BODY>
+</HTML>
