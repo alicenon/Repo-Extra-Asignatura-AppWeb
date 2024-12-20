@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>Estructuras de Control</TITLE>
+
+<SCRIPT LANGUAGE ="JavaScript">
+
+
+function analizar(){
+
+	if((parseInt(document.form1.dato.value)%3)==0){
+
+	document.form1.resultado.value="SI ES MÚLTIPLO";
+	
+	}
+
+	else{
+
+	document.form1.resultado.value="NO ES MÚLTIPLO";
+
+	}
+ 
+ 
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<CENTER>
+
+<h1> Analizando datos </h1>
+
+<form name=form1>
+
+Dato: <input type=text name=dato value=5><br>
+Resultado: <input type=text name=resultado value="NO ES MÚLTIPLO"><br>
+<input type=button value=Analizar onClick="analizar()">
+
+</form>
+
+
+</CENTER>
+</BODY>
+</HTML>

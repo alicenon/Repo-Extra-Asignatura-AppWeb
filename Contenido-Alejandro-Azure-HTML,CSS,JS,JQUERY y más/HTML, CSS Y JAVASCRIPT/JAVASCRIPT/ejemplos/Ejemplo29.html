@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>Objeto Window</TITLE>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+  function abrirVentana(){
+
+    var miVentana;
+
+    miVentana=open("","miVentana","menubar=0,width=250,height=150,top=100,left=100");
+
+    miVentana.document.write("<HTML>");
+    miVentana.document.write("<HEAD>");
+    miVentana.document.write("<TITLE>Nuevo objeto Window</TITLE>");
+    miVentana.document.write("</HEAD>");
+    miVentana.document.write("<BODY>");
+    miVentana.document.write("<CENTER>");
+    miVentana.document.write("<H3>Esta nueva ventana llamada '");
+    miVentana.document.write(miVentana.name);
+    miVentana.document.write(" ' se cerrará al pulsar el botón...<BR>");
+    miVentana.document.write("<FORM>");
+    miVentana.document.write('<INPUT TYPE=BUTTON VALUE="Cerrar" onClick="self.close()">');
+    miVentana.document.write("</FORM>")
+    miVentana.document.write("</CENTER>");
+    miVentana.document.write("</BODY>");
+    miVentana.document.write("</HTML>");
+  }
+
+// final del comentario -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<CENTER>
+<H2>Manejando el objeto window...</H2>
+<FORM NAME="miFormulario">
+<INPUT TYPE=BUTTON NAME="miBoton" VALUE="Púlsame" onClick="abrirVentana()">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

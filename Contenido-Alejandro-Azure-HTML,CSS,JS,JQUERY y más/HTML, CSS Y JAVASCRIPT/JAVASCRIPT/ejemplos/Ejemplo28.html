@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+<TITLE>Date</TITLE>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+   Date.prototype.cambiaDia=cambiaDia;
+   Date.prototype.cambiaMes=cambiaMes;
+   Date.prototype.cambiaAnio=cambiaAnio;
+   Date.prototype.cambiaFecha=cambiaFecha;
+
+   function cambiaFecha(){
+
+     var fecha="";
+
+     fecha += this.cambiaDia();
+     fecha += ", ";
+     fecha += this.getDate();
+     fecha += " de ";
+     fecha += this.cambiaMes();
+     fecha += " del ";
+     fecha += this.cambiaAnio();
+
+     return fecha; 
+   }
+
+   function cambiaMes(){
+       
+       var meses = new Array(12);
+       
+       meses[0]= "Enero"; 
+       meses[1]= "Febrero"; 
+       meses[2]= "Marzo"; 
+       meses[3]= "Abril"; 
+       meses[4]= "Mayo"; 
+       meses[5]= "Junio"; 
+       meses[6]= "Julio"; 
+       meses[7]= "Agosto"; 
+       meses[8]= "Septiembre"; 
+       meses[9]= "Octubre"; 
+       meses[10]= "Noviembre"; 
+       meses[11]= "Diciembre";
+
+       return meses[this.getMonth()]; 
+   }
+
+   function cambiaDia(){
+       
+       var dias = new Array(7);
+       
+       dias[0]= "Domingo"; 
+       dias[1]= "Lunes"; 
+       dias[2]= "Martes"; 
+       dias[3]= "Miércoles"; 
+       dias[4]= "Jueves"; 
+       dias[5]= "Viernes"; 
+       dias[6]= "Sábado"; 
+
+       return dias[this.getDay()]; 
+   }
+
+   function cambiaAnio(){
+   
+      return this.getYear();
+   }
+
+// final del comentario -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<CENTER>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+  var fecha1 = new Date();
+  var fecha2 = new Date("july 22,1998 12:30:00");
+  var fecha3 = new Date("july 22,1997");
+  var fecha4 = new Date(1996, 6, 22);
+  var fecha5 = new Date(1995, 6, 22, 12,30,00);
+  
+  document.write("<H2>Manejando el objeto Date...</H2>");
+  document.write("Hoy es " + fecha1.cambiaFecha());
+  document.write("<BR><BR>Han pasado ");
+  document.write(Date.parse("july 22, 1999"));
+  document.write(" milisegundos <BR>");
+  document.write("desde las 00:00:00 horas del 1/1/1970<BR>"); 
+  document.write("<BR>Este mismo día en ...<BR><BR>"); 
+  document.write("<TABLE BORDER=1 CELLPADDING=4>");  
+  document.write("<TR ALIGN=CENTER><TD>el año...</TD>");  
+  document.write("<TD>" + fecha2.getYear() + "</TD>");  
+  document.write("<TD>" + fecha3.getYear() + "</TD>");  
+  document.write("<TD>" + fecha4.getYear() + "</TD>");  
+  document.write("<TD>" + fecha5.getYear() + "</TD></TR>");  
+  document.write("<TR ALIGN=CENTER><TD>era un...</TD>");  
+  document.write("<TD>" + fecha2.cambiaDia() + "</TD>");  
+  document.write("<TD>" + fecha3.cambiaDia() + "</TD>");  
+  document.write("<TD>" + fecha4.cambiaDia() + "</TD>");  
+  document.write("<TD>" + fecha5.cambiaDia() + "</TD></TR>");  
+  document.write("</TABLE>");
+  document.write("<H2>...Hecho</H2>");
+
+// final del comentario -->
+</SCRIPT>
+</CENTER>
+</BODY>
+</HTML>

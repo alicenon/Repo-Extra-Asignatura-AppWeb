@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE>Objeto Text</TITLE>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+  function moverTexto(){
+     document.miFormulario.caja2.value=document.miFormulario.caja1.value;
+     document.miFormulario.caja1.focus();
+     document.miFormulario.caja1.select();
+  }
+
+// final del comentario -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<CENTER>
+<H2>Manejando el objeto text...</H2>
+<FORM NAME="miFormulario">
+Escribe un texto en la primera caja y pulsa el botón...<BR><BR>
+<INPUT TYPE=TEXT NAME="caja1" VALUE="" SIZE=20> 
+<INPUT TYPE=TEXT NAME="caja2" VALUE="" SIZE=20><BR><BR>
+<INPUT TYPE=BUTTON NAME="boton" VALUE="Púlsame" onClick="moverTexto()">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

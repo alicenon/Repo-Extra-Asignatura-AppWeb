@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>Objeto Checkbox</TITLE>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+  function informar(){
+
+     var mensaje="";
+     
+     mensaje+="Se han seleccionado las opciones: \n\n";
+     
+     for(i=0; i<4; i++){  
+        if (miFormulario.elements[i].checked){
+          mensaje+="\t * " + miFormulario.elements[i].value + "\n";
+        }
+     }
+
+     alert(mensaje);
+  }
+ 
+// final del comentario -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<CENTER>
+<H2>Manejando los objetos checkbox...</H2>
+<FORM NAME="miFormulario" ACTION="javascript:informar()">
+Selecciona las opciones deseadas...<BR><BR>
+<INPUT TYPE=CHECKBOX NAME="checkbox1" VALUE="uno" CHECKED>Opción 1<BR> 
+<INPUT TYPE=CHECKBOX NAME="checkbox2" VALUE="dos">Opción 2<BR> 
+<INPUT TYPE=CHECKBOX NAME="checkbox3" VALUE="tres">Opción 3<BR> 
+<INPUT TYPE=CHECKBOX NAME="checkbox4" VALUE="cuatro">Opción 4<BR><BR> 
+<INPUT TYPE=SUBMIT NAME="botonEnviar" VALUE="Enviar">
+<INPUT TYPE=RESET NAME="botonlimpiar" VALUE="Limpiar">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

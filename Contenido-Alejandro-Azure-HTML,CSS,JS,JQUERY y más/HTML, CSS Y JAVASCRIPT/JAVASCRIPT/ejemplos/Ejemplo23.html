@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>String's</TITLE>
+</HEAD>
+<BODY>
+<CENTER>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+  var cadena="!Hola!";
+
+  document.write("<H3> Manejando Cadenas</H3>");
+  document.write("La variable 'cadena' contiene -> "+cadena.bold()+"<BR><BR>");
+  document.write("su longitud es de "+cadena.length+" caracteres <BR>");
+  document.write("distribuidos como indica la siguiente tabla: <BR><BR>");
+  document.write("<TABLE BORDER=1><TR>");
+  document.write("<TD>Posición</TD>");
+  
+  for (i=0; i<cadena.length; i++){
+    document.write("<TD>" + i + "</TD>");
+  }
+
+  document.write("</TR><TR>");
+  document.write("<TD>Contenido</TD>");
+
+  for (i=0; i<cadena.length; i++){
+    document.write("<TD><B>" + cadena.charAt(i) + "</B></TD>");
+  }
+
+  document.write("</TR></TABLE><BR>");
+  document.write("La primera posición en la que aparece '!' es la : ");
+  document.write(cadena.indexOf('!'));
+  document.write("<BR>La última posición en la que aparece '!' es la : ");
+  document.write(cadena.lastIndexOf('!'));
+  document.write("<H3>...Hecho</H3>");
+
+// final del comentario -->
+</SCRIPT>
+</CENTER>
+</BODY>
+</HTML>

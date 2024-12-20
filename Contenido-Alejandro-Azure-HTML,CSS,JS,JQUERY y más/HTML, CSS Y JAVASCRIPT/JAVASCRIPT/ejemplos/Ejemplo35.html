@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>Objetos Button, Submit y Reset</TITLE>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+  function moverTexto(){
+     
+     if(document.miFormulario.cajaTexto1.value==""){
+         document.miFormulario.cajaTexto1.value=document.miFormulario.cajaTexto2.value;
+         document.miFormulario.botonTexto.value="--->";
+         document.miFormulario.cajaTexto2.value="";
+         document.miFormulario.cajaTexto1.focus();
+         document.miFormulario.cajaTexto1.select();
+     }
+     else{
+          document.miFormulario.cajaTexto2.value=document.miFormulario.cajaTexto1.value;
+          document.miFormulario.botonTexto.value="<---";
+          document.miFormulario.cajaTexto1.value="";
+          document.miFormulario.cajaTexto2.focus();
+          document.miFormulario.cajaTexto2.select();
+     }
+  }
+ 
+  function informar(){
+
+     var mensaje="";
+     
+     mensaje+="El formulario '"+miFormulario.name+"' contiene ";
+     mensaje+=miFormulario.elements.length + " elementos, que son:\n\n";
+     
+     for(i=0; i<miFormulario.elements.length; i++){  
+        mensaje+="\t\t" + miFormulario.elements[i].name + "\n";
+     }
+
+     alert(mensaje);
+  }
+ 
+// final del comentario -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<CENTER>
+<H2>Manejando los objetos <BR> button, submit y reset...</H2>
+<FORM NAME="miFormulario" ACTION="javascript:informar()">
+Escribe un texto en cualquier caja y pulsa el botón...<BR><BR>
+<INPUT TYPE=TEXT NAME="cajaTexto1" VALUE="" SIZE=20> 
+<INPUT TYPE=BUTTON NAME="botonTexto" VALUE="<-->" onClick="moverTexto()">
+<INPUT TYPE=TEXT NAME="cajaTexto2" VALUE="" SIZE=20><BR><BR>
+<INPUT TYPE=SUBMIT NAME="botonEnviar" VALUE="Enviar"">
+<INPUT TYPE=RESET NAME="botonlimpiar" VALUE="Limpiar">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

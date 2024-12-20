@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<TITLE>Manejando Eventos</TITLE>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+  function confirmar_reset(){
+     return confirm("¿ Deseas Limpiar el formulario... ?");
+  } 
+
+  function confirmar_submit(){
+     return confirm("¿ Deseas enviar el formulario... ?");
+  } 
+
+// final del comentario -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<CENTER>
+<H1>Manejando Eventos</H1>
+<FORM NAME="miFormulario" onSubmit="return confirmar_submit()" 
+                          onReset="return confirmar_reset()">
+<P><B>Por favor introduzca los siguientes datos:</B></P>
+<TABLE>
+<TR>
+  <TD ALIGN=RIGHT>Nombre:</TD>
+  <TD ALIGN=LEFT COLSPAN=3><INPUT TYPE="TEXT" NAME="nombre" SIZE=10></TD>
+</TR>
+<TR>
+  <TD ALIGN=RIGHT>Apellidos:</TD>
+  <TD ALIGN=LEFT COLSPAN=3><INPUT TYPE="TEXT" NAME="apellidos" SIZE=30></TD>
+</TR>
+<TR><TD ALIGN=CENTER COLSPAN=4><HR></TD></TR>
+<TR>
+   <TD ALIGN=RIGHT>Dirección:</TD>
+   <TD ALIGN=LEFT COLSPAN=3><INPUT TYPE="TEXT" NAME="calle" SIZE=30></TD>
+</TR>
+<TR>
+   <TD ALIGN=RIGHT>Ciudad:</TD>
+   <TD ALIGN=LEFT><INPUT TYPE="TEXT" NAME="ciudad" SIZE=10></TD>
+   <TD ALIGN=RIGHT>Cod.Postal:</TD>
+   <TD ALIGN=LEFT><INPUT TYPE="TEXT" NAME="codigo" SIZE=5 MAXLENGTH=5></TD>
+</TR>
+</TABLE><BR>
+<INPUT TYPE="SUBMIT" VALUE="Enviar">
+<INPUT TYPE="RESET" VALUE="Limpiar">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

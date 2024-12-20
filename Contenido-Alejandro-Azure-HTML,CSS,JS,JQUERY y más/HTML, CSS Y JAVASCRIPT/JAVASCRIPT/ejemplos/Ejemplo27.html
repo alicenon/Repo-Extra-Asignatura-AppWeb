@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<TITLE>Math</TITLE>
+</HEAD>
+<BODY>
+<CENTER>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+    var a, b, c, solucion, valores;
+
+    document.write("<H1>Manejando el objeto Math...</H1>");
+
+    valores=prompt("Introduce los coeficientes de la ecuación de 2º grado separados por comas:","");
+    valores=valores.split(",");
+
+    a=parseFloat(valores[0]);
+    b=parseFloat(valores[1]);
+    c=parseFloat(valores[2]);
+
+    document.write("<BR><B>Las soluciones de la ecuación de 2º grado: </B><BR><BR>");
+    document.write(a + "x² + " + b + "x + " + c + " = 0 <BR>");
+
+    solucion= (-b + Math.sqrt(Math.pow(b,2)-(4*a*c)))/(2*a);
+    document.write("Son: <B>x = " + solucion);
+    solucion= (-b - Math.sqrt(Math.pow(b,2)-(4*a*c)))/(2*a);
+    document.write("</B> y <B>x = " + solucion + "</B><BR><BR>");
+
+    document.write("<H3>...Hecho</H3>");
+
+// final del comentario -->
+</SCRIPT>
+</CENTER>
+</BODY>
+</HTML>

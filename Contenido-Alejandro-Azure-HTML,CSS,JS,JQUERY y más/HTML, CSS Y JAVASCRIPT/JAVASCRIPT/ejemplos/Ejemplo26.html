@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>Math</TITLE>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+  function calculaEcuacion() {
+    var a, b, c, solucion;
+
+    a=parseFloat(document.miFormulario.a.value);
+    b=parseFloat(document.miFormulario.b.value);
+    c=parseFloat(document.miFormulario.c.value);
+
+    solucion= (-b + Math.sqrt(Math.pow(b,2)-(4*a*c)))/(2*a);
+    document.miFormulario.x1.value=solucion;
+    solucion= (-b - Math.sqrt(Math.pow(b,2)-(4*a*c)))/(2*a);
+    document.miFormulario.x2.value=solucion;
+  }
+
+// final del comentario -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<CENTER>
+<H1>Manejando el objeto Math...</H1>
+<FORM NAME="miFormulario">
+<BR><B>Introduce los coeficientes de la</B>
+<BR><B>siguiente ecuación de 2º grado: </B><BR><BR>
+<INPUT TYPE=TEXT NAME="a" SIZE=3 MAXLENGTH=3> x² +  
+<INPUT TYPE=TEXT NAME="b" SIZE=3 MAXLENGTH=3> x +
+<INPUT TYPE=TEXT NAME="c" SIZE=3 MAXLENGTH=3> = 0<BR>
+<BR><B>La soluciones son:</B><BR><BR>
+ x = <INPUT TYPE=TEXT NAME="x1" SIZE=5 MAXLENGTH=5> ó 
+ x = <INPUT TYPE=TEXT NAME="x2" SIZE=5 MAXLENGTH=5>
+<BR><BR>
+<INPUT TYPE=BUTTON VALUE="Solucionar" NAME="miBoton" onClick="calculaEcuacion()">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

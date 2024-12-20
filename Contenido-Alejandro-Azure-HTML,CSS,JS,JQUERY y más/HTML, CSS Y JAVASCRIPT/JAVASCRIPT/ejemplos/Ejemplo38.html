@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>Objeto Select</TITLE>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+  function informar(){
+
+     var mensaje="";
+     
+     mensaje+="Se ha seleccionado un procesador ";
+     mensaje+=document.miFormulario.procesador.options[document.miFormulario.procesador.selectedIndex].value;
+     mensaje+="\n        con sistema operativo ";
+     mensaje+=document.miFormulario.soperativo.options[document.miFormulario.soperativo.selectedIndex].value;
+
+     alert(mensaje);
+  }
+ 
+// final del comentario -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<CENTER>
+<H2>Manejando los objetos select...</H2>
+<FORM NAME="miFormulario" ACTION="javascript:informar()">
+Selecciona las opciones deseadas...<BR><BR>
+<TABLE BORDER=1 CELLPADDING=5><TR ALIGN=CENTER>
+<TD>Procesador</TD><TD>Sistema Operativo</TD></TR><TD>
+<SELECT NAME="procesador" SIZE=1>
+<OPTION VALUE="Celeron-366" SELECTED>Celeron 366 Mhz</OPTION> 
+<OPTION VALUE="PIII-450">Pentium III 450 Mhz</OPTION> 
+<OPTION VALUE="PIII-500">Pentium III 500 Mhz</OPTION> 
+<SELECT>
+</TD><TD>
+<SELECT NAME="soperativo" SIZE=3 MULTIPLE>
+<OPTION VALUE="Windows 9x"SELECTED>Windows 95</OPTION> 
+<OPTION VALUE="Windows 9x">Windows 98</OPTION> 
+<OPTION VALUE="Windows NT">Windows NT</OPTION> 
+<SELECT>
+</TD></TR></TABLE><BR>
+<INPUT TYPE=SUBMIT NAME="botonEnviar" VALUE="Enviar">
+<INPUT TYPE=RESET NAME="botonlimpiar" VALUE="Limpiar">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

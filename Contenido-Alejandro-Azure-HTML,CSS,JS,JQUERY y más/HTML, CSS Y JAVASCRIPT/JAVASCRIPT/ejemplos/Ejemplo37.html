@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>Objeto Radio</TITLE>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+  function informar(){
+
+     var mensaje="";
+     
+     mensaje+="Se ha seleccionado un procesador ";
+     
+     for(i=0; i<miFormulario.procesador.length; i++){  
+        if (miFormulario.procesador[i].checked){
+          mensaje+=miFormulario.procesador[i].value;
+        }
+     }
+
+     mensaje+="\n        con sistema operativo ";
+
+     for(i=0; i<miFormulario.soperativo.length; i++){  
+        if (miFormulario.soperativo[i].checked){
+          mensaje+=miFormulario.soperativo[i].value;
+        }
+     }
+
+     alert(mensaje);
+  }
+ 
+// final del comentario -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<CENTER>
+<H2>Manejando los objetos radio...</H2>
+<FORM NAME="miFormulario" ACTION="javascript:informar()">
+Selecciona las opciones deseadas...<BR><BR>
+<TABLE BORDER=1 CELLPADDING=5><TR ALIGN=CENTER>
+<TD>Procesador</TD><TD>Sistema Operativo</TD></TR><TD>
+<INPUT TYPE=RADIO NAME="procesador" VALUE="Celeron-366" CHECKED>Celeron 366 Mhz<BR> 
+<INPUT TYPE=RADIO NAME="procesador" VALUE="PIII-450">Pentium III 450 Mhz<BR> 
+<INPUT TYPE=RADIO NAME="procesador" VALUE="PIII-500">Pentium III 500 Mhz<BR> 
+</TD><TD>
+<INPUT TYPE=RADIO NAME="soperativo" VALUE="Windows 9x" CHECKED>Windows 95<BR> 
+<INPUT TYPE=RADIO NAME="soperativo" VALUE="Windows 9x">Windows 98<BR> 
+<INPUT TYPE=RADIO NAME="soperativo" VALUE="Windows NT">Windows NT<BR> 
+</TD></TR></TABLE><BR>
+<INPUT TYPE=SUBMIT NAME="botonEnviar" VALUE="Enviar">
+<INPUT TYPE=RESET NAME="botonlimpiar" VALUE="Limpiar">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

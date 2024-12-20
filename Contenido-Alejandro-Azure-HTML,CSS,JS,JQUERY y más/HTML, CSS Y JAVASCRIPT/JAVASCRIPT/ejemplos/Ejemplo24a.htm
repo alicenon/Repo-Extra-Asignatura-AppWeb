@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>Funciones/Arrays</TITLE>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+  function ObtieneMayor() {
+
+    var num_args=ObtieneMayor.arguments.length; 
+    var el_mayor=ObtieneMayor.arguments[0]; 
+
+    for (i=1;i<num_args;i++){
+      if (ObtieneMayor.arguments[i]>el_mayor){
+                el_mayor=ObtieneMayor.arguments[i];
+          } 
+    }
+    return el_mayor;
+  }
+
+// final del comentario -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<CENTER>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+
+  document.write("<H3> El mayor valor de 8, 15, 17, 32, 1, 93 y 7 es:</H3>");
+  document.write("<H1>" + ObtieneMayor(8,15,17,32,1,93,7) + "</H1>"); 
+  document.write("<H3> El mayor valor de 25, 37 y 12 es:</H3>");
+  document.write("<H1>" + ObtieneMayor(25,37,12) + "</H1>"); 
+  document.write("<H3>...Hecho</H3>");
+
+// final del comentario -->
+</SCRIPT>
+</CENTER>
+</BODY>
+</HTML>

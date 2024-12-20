@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<TITLE>Objeto Frame</TITLE>
+<SCRIPT LANGUAGE ="JavaScript">
+<!-- se oculta la información de los navegadores antiguos
+
+  function escribir(){
+    top.MarcoSuperior.document.write("<CENTER>");
+    top.MarcoSuperior.document.write("<H2>Manejando el objeto frame...</H2>");
+    top.MarcoSuperior.document.write(top.frames[0].name);
+    top.MarcoSuperior.document.write("</CENTER>");
+    top.MarcoInferiorDerecho.document.write("<CENTER>");
+    top.MarcoInferiorDerecho.document.write(top.frames[1].name);
+    top.MarcoInferiorDerecho.document.write("</CENTER>");
+    top.MarcoInferiorIzquierdo.document.write("<CENTER>");
+    top.MarcoInferiorIzquierdo.document.write(top.frames[2].name);
+    top.MarcoInferiorIzquierdo.document.write("</CENTER>");
+  }
+
+// final del comentario -->
+</SCRIPT>
+</HEAD>
+<FRAMESET ROWS="25%,*" onLoad="escribir();">
+   <FRAME SRC="" NAME="MarcoSuperior">
+   <FRAMESET COLS="50%,*">
+      <FRAME SRC="" NAME="MarcoInferiorIzquierdo">
+      <FRAME SRC="" NAME="MarcoInferiorDerecho">
+   </FRAMESET>
+</FRAMESET>
+</HTML>
